@@ -63,6 +63,9 @@ main {
   display: flex;
   justify-content: space-between;
 }
+.main-nav-bar .main-nav-list :nth-child(1) {
+  display: none;
+}
 
 .main-nav-bar .main-nav-list li {
   padding: 0 13px;
@@ -241,14 +244,17 @@ article {
   .main-nav-bar .main-nav-list {
     flex-direction: column;
   }
+  .main-nav-bar .main-nav-list :nth-child(1) {
+    display: inline;
+  }
+  .main-nav-bar .main-nav-list :not(:nth-child(1)) {
+    display: none;
+  }
   .banner {
     margin-bottom: 0;
     font-size: 58px;
   }
-  /* aside {
-  
-    
-  } */
+
   main aside {
     display: flex;
     width: 92%;
@@ -318,8 +324,17 @@ article {
 
 /* 모바일 세로 (해상도 ~ 479px)*/
 @media all and (max-width: 479px) {
+  .main-nav-bar {
+    padding: 50px 35px;
+  }
   .main-nav-bar .main-nav-list {
     flex-direction: column;
+  }
+  .main-nav-bar .main-nav-list :nth-child(1) {
+    display: inline;
+  }
+  .main-nav-bar .main-nav-list :not(:nth-child(1)) {
+    display: none;
   }
   .banner {
     margin-bottom: 0;
